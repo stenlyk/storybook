@@ -11,10 +11,16 @@ export default {
   input: "src/index.ts",
   output: [
     {
+      dir: "lib/cjs",
+      format: "cjs",
+      sourcemap: true,
+    },
+    {
       dir: "lib",
       format: "esm",
       sourcemap: true,
       preserveModules: true,
+      preserveModulesRoot: "../",
     },
   ],
   plugins: [
